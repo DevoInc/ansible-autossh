@@ -9,3 +9,6 @@
 # holds a dictionary with hybrid names as keys, and ssh ports as values
 # hybrid_ports: 
 
+# dictionary to hold the remote tunnel port, keyed as hybrid_ports
+# hybrid_delegated_ports
+
