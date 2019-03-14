@@ -15,6 +15,6 @@
         environment: ["TZ=UTC"]
         description: "autossh service"
         user: logtrust
-        exec_start: "/usr/bin/autossh -f -M 0 -i /home/logtrust/.ssh/malote -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -N -R {{ hybrid_delegated_ports[hybrid] }}:127.0.0.1:10010 {{ hybrid }}@{{ hybrid_endpoint }} -p {{ hybrid_ports[hybrid] }}"
+        exec_start: "/usr/bin/autossh -f -M 0 -i /home/logtrust/.ssh/malote -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -N -R {{ hybrid_delegated_ports[hybrid] }}:127.0.0.1:10100 {{ hybrid }}@{{ hybrid_endpoint }} -p {{ hybrid_ports[hybrid] }}"
         restart: always
 
