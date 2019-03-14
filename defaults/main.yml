@@ -1,0 +1,11 @@
+---
+
+# defines name of remote ssh user, which matchs with the hybrid name
+# hybrid: 
+
+# tunnel SSH endpoint
+# hybrid_endpoint:
+
+# holds a dictionary with hybrid names as keys, and ssh ports as values
+# hybrid_ports: 
+

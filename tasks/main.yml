@@ -4,3 +4,17 @@
   package:
     name: autossh
 
+- name: Ceate systemd service
+  include_role:
+    name: cimon-io.systemd-service
+  vars:
+    systemd_service:
+      autossh:
+        enabled: yes
+        type: simple
+        environment: ["TZ=UTC"]
+        description: "autossh service"
+        user: logtrust
+        exec_start: "/usr/bin/autossh -f -M 0 -i /home/logtrust/.ssh/malote -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -N -R 20011:127.0.0.1:10010 {{ hybrid }}@{{ hybrid_endpoint }} -p {{ hybrid_ports[hybrid] }}"
+        restart: always
+
